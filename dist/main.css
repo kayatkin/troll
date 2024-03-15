@@ -1,0 +1,75 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.card:hover .delete-icon {
+    visibility: visible;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.drop-before::before,
+.drop-after::after {
+    content: '';
+    display: block;
+    height: 30px; /* Размер места под карточкой */
+}
+
+.drop-before::before {
+    border-top: 2px dashed #333;
+}
+
+.drop-after::after {
+    border-bottom: 2px dashed #333;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+

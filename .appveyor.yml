@@ -1,0 +1,20 @@
+environment:
+  nodejs_version: "18"
+
+branches:
+  only:
+    - master  # ветка git
+    - main
+
+cache: node_modules  # кеширование
+
+install:
+  - yarn install  # команда установки зависимостей
+
+build: off  # отключаем встроенную в appveyor систему сборки
+
+build_script:
+  - yarn run   # команда сборки
+
+start_script:
+  - yarn start # команда запуска
